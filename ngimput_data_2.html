@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <input type="text" id="text2">
+  <!-- <input type="number" id="text2" value="12345"> -->
+  <button onclick="tampil()">klik</button>
+  <p id="textnya"></p>
+
+  <script>
+    // document.getElementById("textnya").innerHTML = "Ini sedang belajar Javascript";
+
+    // document.getElementById("text2").value = "ini value inputan";
+
+    // document.querySelector("#text2").value = "ini value inputan";
+
+    function tampil() {
+      let inputan = document.getElementById("text2").value;
+      console.log(inputan);
+      document.getElementById("textnya").innerHTML = inputan;
+    }
+
+
+  </script>
+</body>
+
+</html>

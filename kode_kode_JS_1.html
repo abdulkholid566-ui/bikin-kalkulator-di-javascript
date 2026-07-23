@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Javascript</title>
+</head>
+
+<body>
+  <script>
+    /*cara buat variable
+    */
+    //  deklarasi variable : var, let, const
+
+    //  var = nilainya bisa diubah ( versi zaman dulu)
+    //  let = nilainya bisa diubah ( versi zaman sekarng)
+    //  const = nilainya tidak bisa diubah
+    // Variable = tempat penampung value atau nilai
+
+
+    // contoh :
+    // let nama ="pak tri";
+    // console.log(nama);
+    // var nama = "pak tri";
+    // const nama = "pak tri";
+
+    // let name = "pak tri";
+    // nama = "budi";
+
+    // let hari = "senin";
+
+    // console.log(name);
+    // console.log(hari);
+
+    // const nilai = 10;
+    // nilai = 30; //erorr
+
+    // console.log(name);
+    // console.log(hari);
+    // console.log(nilai);
+
+    // objek atau array
+    const daftarbuku = [
+      { id: 1, judul: "hari-hari belajar", stock: 5 },
+      { id: 2, judul: "mari belajar coding", stock: 6 }
+    ];
+    daftarbuku.push({ id: 3, judul: "komik sincan", stock: 7 });
+
+    // Belajar Perulangan atau looping FOR
+    for (let i = 0; i < daftarbuku.length; i++) {
+      console.log(daftarbuku[i].judul);
+
+    }
+    console.log(daftarbuku[0].id);
+    console.log(daftarbuku[1]);
+    console.log(daftarbuku[2]);
+    console.log(daftarbuku[3]); //undefined
+
+    //Concat
+    const namaDepan = "sule";
+    const namaBelakang = "raharjo";
+    const gabungan = ` nama saya adalah ${namaDepan} ${namaBelakang}`;
+    console.log(namaDepan + " " + namaBelakang);
+    console.log(gabungan);
+
+    /* kali = *
+    tambah = +
+    kurang = - 
+    bagi = /
+    */
+    let angka1 = 15;
+    let angka2 = 50;
+    let hasilKali = angka1 * angka2;
+    console.log(hasilKali);
+
+    let hasilBagi = angka1 / angka2;
+    // console.log(hasilBagi);
+    console.log(`hasil pembagian dari ${angka1} / ${angka2} = ${hasilBagi}`);
+
+    let hasilTambah = angka1 + angka2;
+    console.log(`hasilp penjumlahan dari ${angka1} + ${angka2} = ${hasilTambah}`);
+
+    let hasilKurang = angka1 - angka2;
+    console.log(`hasilp pengurangan dari ${angka1} - ${angka2} = ${hasilKurang}`);
+
+    // mengubah dari parsing ke number pake parseInt
+    let umur = "35.5";
+    let parsing = parseInt(umur);
+    // let parseFloat = parseFloat(umur);
+    console.log(umur + 8);
+    // console.log(parseFloat + 8);
+
+    // mengubah dari parsing ke number pake parseFloat
+    let umur1 = "35.5";;
+    let pecahan = parseFloat(umur1);
+    console.log(pecahan + 8);
+
+
+
+    //JSON = Javascript objek nation
+    //JSON.parse
+    // server akan ngirim data bertype string di js client/fe nangkep dan diubah jadi json(object)
+    let dataDariServer = '{"nama" : "bono", "umur" : 40}';
+    console.log(dataDariServer);
+    let dataUser = JSON.parse(dataDariServer);
+    console.log(dataUser);
+
+    //gerbang logika and, or, nor, xor, dll
+    /* AND simbol di javascript adalah &&
+    x  y  hasilnya RESULT
+    t  f    f
+    f  t    f
+    t  t    t
+    f  f    f
+    */
+
+    /* OR simbol di javascript adalah ||
+    x  y  hasilnya RESULT
+    t  f    t
+    f  t    t
+    t  t    t
+    f  f    f
+    */
+
+    // oprator perbandingan kesamaan :
+    // == : melakukan kesamaan value satu dengan yang lain + tidak menyamakan tipe data
+    // === : melakukan kesamaan value satu dengan yang lain + menyamakan tipe data
+
+    let usianya = 25;
+    if (usianya === "25") {
+      console.log("true");
+    } else {
+      console.log("false");
+    }
+
+    // oprator perbandingan ketiksamaan:
+    /*
+    !=
+    !==
+    */
+    console.log("5" != "5");
+    console.log("5" !== "5");
+
+    let a = 4; // tipe data integer
+    let b = "4"; // tipe data string
+
+    console.log(a != b); // false
+    console.log(b !== a);//true
+
+    // oprator
+    // > lebihdari
+    // >= sama dengan 
+    // < kurang 
+    // <= kurang dari
+    console.log(`4 > 4 ${4 > 4}`);// false 
+    console.log(`4 >= 4 ${4 >= 4}`);// true
+    console.log(`4 < 4 ${4 < 4}`);// false
+    console.log(`4 <= 4 ${4 <= 4}`);// true
+
+    switch
+
+
+
+  </script>
+</body>
+
+</html>

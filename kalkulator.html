@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+</head>
+
+<body>
+
+  <input type="number" id="angka1">
+  <input type="number" id="angka2">
+  <button onclick="penjumlahan()">
+    penjumlahan
+  </button>
+  <p id="hasil">hasilnya adalah : 0</p>
+
+  <!-- pengurangan -->
+
+  <input type="number" id="angka3">
+  <input type="number" id="angka4">
+  <button onclick="pengurangan()">
+    pengurangan
+  </button>
+  <p id="hasil pengurangan">hasilnya adalah : 0</p>
+
+  <!-- perkalian -->
+  <input type="number" id="angka5">
+  <input type="number" id="angka6">
+  <button onclick="perkalian()">
+    perkalian
+  </button>
+  <p id="hasil perkalian">hasilnya adalah : 0</p>
+
+  <!-- pembagaian -->
+  <input type="number" id="angka7">
+  <input type="number" id="angka8">
+  <button onclick="pembagian()">
+    pembagian
+  </button>
+  <p id="hasil pembagian">hasilnya adalah : 0</p>
+
+
+  <script>
+    function penjumlahan() {
+      let nomor1 = parseFloat(document.getElementById("angka1").value);
+      let nomor2 = parseFloat(document.getElementById("angka2").value);
+      const hasiljumlah = nomor1 + nomor2;
+      // console.log(hasiljumlah);
+      document.getElementById("hasil").innerHTML = `hasilnya adalah: ${hasiljumlah}`;
+    }
+    // pengurangan
+    function pengurangan() {
+      let nomor3 = parseFloat(document.getElementById("angka3").value);
+      let nomor4 = parseFloat(document.getElementById("angka4").value);
+      const hasiljumlah = nomor3 - nomor4;
+      // console.log(hasiljumlah);
+      document.getElementById("hasil pengurangan").innerHTML = `hasilnya adalah: ${hasiljumlah}`;
+    }
+    // perkalian
+    function perkalian() {
+      let nomor5 = parseFloat(document.getElementById("angka5").value);
+      let nomor6 = parseFloat(document.getElementById("angka6").value);
+      const hasiljumlah = nomor5 * nomor6;
+      // console.log(hasiljumlah);
+      document.getElementById("hasil perkalian").innerHTML = `hasilnya adalah: ${hasiljumlah}`;
+    }
+    // pembagian
+    function pembagian() {
+      let nomor7 = parseFloat(document.getElementById("angka7").value);
+      let nomor8 = parseFloat(document.getElementById("angka8").value);
+      const hasiljumlah = nomor7 / nomor8;
+      // console.log(hasiljumlah);
+      document.getElementById("hasil pembagian").innerHTML = `hasilnya adalah: ${hasiljumlah}`;
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kilat Paket
+  </title>
+</head>
+
+<body>
+  <select id="operator" required>
+    <option value="">--pilih dulu operator--</option>
+    <option value="bogor">Bogor</option>
+    <option value="depok">Depok</option>
+    <option value="selainnya">selainnya</option>
+  </select>
+  <button id="btn-tujuan"> Cek Tarif</button>
+  </form>
+  <p id="hasil">hasilnya adalah : 0</p>
+
+  <script>
+
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", hitung);
+
+    function hitung(e) {
+      e.preventDefault();
+
+      let opt = document.getElementById("operator").value.toLowerCase().trim();
+      let berat = parseInt(document.getElementById("berat").value.trim());
+
+      let perGram = berat / 1000;
+      let hasil = 0;
+
+      const kotanya = ["bogor", "depok", "jakarta", "bandung", "bekasi"];
+
+      if (berat < 0) {
+        alert("Tidak boleh minus");
+        return;
+      }
+
+      if (kotanya.includes(opt) && opt == "bogor") {
+        hasil = perGram * 2000;
+      } else if (kotanya.includes(opt) && opt == "depok") {
+        hasil = perGram * 4000;
+      } else if (
+        kotanya.includes(opt) &&
+        (opt == "jakarta" || opt == "bandung" || opt == "bekasi")
+      ) {
+        hasil = perGram * 6000;
+      } else {
+        hasil = "<span style='color:red'>Maaf, kota tidak tersedia</span>";
+      }
+
+      document.getElementById("hasil").innerHTML = "Hasilnya adalah : " + hasil;
+    }
+
+
+
+
+
+
+
+    // let btn = document.getElementById("btn");
+    // btn.addEventListener("click", hasilHitungan);
+
+    // function hasilHitungan() {
+    //   let berat = 10;
+    //   let perGram = berat / 1000;
+    //   let hasil = 0;
+    //   let opt = document.getElementById("operator").value;
+
+    //   switch (opt) {
+    //     case "bogor":
+    //       hasil = berat * 2000;
+    //       break;
+
+    //     case "depok":
+    //       hasil = berat * 4000;
+    //       break;
+
+    //     case "selainnya":
+    //       hasil = berat * 6000;
+    //       break;
+
+    //     default:
+    //       hasil = 0;
+    //       alert("Pilih tujuan terlebih dahulu!");
+    //   }
+    // }
+    // document.getElementById("hasil").textContent =
+    //   "Hasilnya adalah: Rp " + hasil;
+
+  </script>
+</body>
+
+</html>

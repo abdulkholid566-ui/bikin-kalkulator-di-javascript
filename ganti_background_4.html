@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body class="bdy">
+  <form action="">
+    <select name="" id="pilih-tema">
+      <option value=""></option>
+      <option value="terang">Kuning</option>
+      <option value="gelap">Hitam</option>
+      <option value="biru">Biru</option>
+    </select>
+    <button type="submit" id="form-tema">ganti warnanya</button>
+  </form>
+  <p id="Pesan1">Selamat siang, terang sekaliiii!</p>
+  <p id="Pesan2">Selamat malam, waktunya tidur</p>
+  <p id="Pesan3">hujan, deras sekaliiii!</p>
+
+  <script>
+    let form_tema = document.getElementById("form-tema");
+    let pilih_tema = document.getElementById("pilih-tema");
+    const body = document.querySelector(".bdy");
+    let pesan1 = document.getElementById("Pesan1");
+    let pesan2 = document.getElementById("Pesan2");
+    let pesan3 = document.getElementById("Pesan3");
+
+
+    form_tema.addEventListener("click", function (e) {
+      e.preventDefault();
+      let pilihTemanya = pilih_tema.value;
+      if (pilihTemanya == "terang") {
+        pesan1.style.display = "block";
+        body.style.backgroundColor = "yellow";
+        body.style.color = "red";
+        pesan1.textContent = "Selamat siang, terang sekaliiii!";
+        pesan2.style.display = "none";
+        pesan3.style.display = "none";
+
+      } else if (pilihTemanya == "gelap") {
+        pesan2.style.display = "block";
+        body.style.backgroundColor = "black";
+        body.style.color = "Yellow";
+        pesan2.textContent = "Selamat malam, waktunya tidur";
+        pesan1.style.display = "none";
+        pesan3.style.display = "none";
+
+      } else if (pilihTemanya == "biru") {
+        pesan3.style.display = "block";
+        body.style.backgroundColor = "blue";
+        body.style.color = "white";
+        pesan3.textContent = "hujan, deras sekaliiii!";
+        pesan1.style.display = "none";
+        pesan2.style.display = "none";
+
+
+      }
+
+    });
+  </script>
+
+
+</body>
+
+</html>
